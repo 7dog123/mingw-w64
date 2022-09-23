@@ -1,3 +1,3 @@
-FROM debian:10
+FROM debian:latest
 
 RUN cat /etc/apt/sources.list
