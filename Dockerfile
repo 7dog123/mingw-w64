@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 COPY ./sources.list /etc/apt
 
-COPY apt update && \
+RUN apt update && \
      apt -y build-dep binutils-mingw-w64-x86-64 \
      gcc-mingw-w64-x86-64 mingw-w64-x86-64-dev \
      win-iconv-mingw-w64-dev libnpth-mingw-w64-dev \
