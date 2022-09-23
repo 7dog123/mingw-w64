@@ -2,6 +2,9 @@ FROM ubuntu:latest
 
 COPY ./sources.list /etc/apt
 
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=US/Central
+
 RUN apt update && \
      apt -y build-dep binutils-mingw-w64-x86-64 \
      gcc-mingw-w64-x86-64 mingw-w64-x86-64-dev \
